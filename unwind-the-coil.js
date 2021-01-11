@@ -22,8 +22,27 @@ const snakeMatrix = [
 
 
 unwind = (matrix) => {
-    console.log(matrix)
     // your code here
+
+    console.log(...matrix.shift())
+    matrix.forEach(element => {
+        console.log(element.pop())
+    });
+    console.log(...matrix.pop().reverse())
+    for(let i = matrix.length-1; i>=0; i--){
+        console.log(matrix[i].shift());
+    }
+    // matrix.reverse().forEach(el => {
+    //     console.log(el.shift());
+    // });
+    // matrix.reverse();
+    if(matrix.length>0)
+        unwind(matrix);
+    else
+        return null;
+    // console.log(...matrix.reverse().shift())
+    // console.log(matrix)
+
 }
 
 
